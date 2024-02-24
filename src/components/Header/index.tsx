@@ -2,7 +2,7 @@ import styles from "./styles.module.css"
 
 export function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <h2>
         <strong>Quiz </strong>
         Game
