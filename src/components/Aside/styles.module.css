@@ -13,6 +13,8 @@
     border-radius: 6px;
 
     padding: 0.25rem;
+
+    
   }
 }
 
@@ -41,7 +43,7 @@ nav {
 
 .aside-open-close {
   position: relative;
-  top: 50%;
+  top: 10%;
   left: 100%;
   transform: translate(-50%);
 }
