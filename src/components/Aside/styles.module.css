@@ -3,6 +3,17 @@
   width: 200px;
   height: 100%;
   background-color: var(--orange-300);
+  border: 1px solid var(--orange-400);
+
+  button {
+    cursor: pointer;
+    transform: translate(-10px);
+    background-color: var(--orange-300);
+    border: 1px solid var(--orange-400);
+    border-radius: 6px;
+
+    padding: 0.25rem;
+  }
 }
 
 .aside-open {
@@ -12,7 +23,7 @@
 }
 
 .aside-not-open {
-  left: -199px;
+  left: -200px;
   transition: 0.4s;
 }
 

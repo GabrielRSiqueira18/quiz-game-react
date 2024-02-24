@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import styles from "./styles.module.css"
 
 interface AsideProps {
@@ -12,8 +13,7 @@ export function Aside({ isOpen, handleSetAsideIsOpen }: AsideProps) {
         className={styles['aside-open-close']}
         onClick={() => handleSetAsideIsOpen()}
         >
-          
-          --- 
+          {isOpen ? <ArrowLeft /> : <ArrowRight />} 
       </button>
 
       <nav>
