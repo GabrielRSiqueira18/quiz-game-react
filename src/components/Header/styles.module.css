@@ -1,4 +1,69 @@
 header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.5rem;
+
   display: flex;
   justify-content: space-between;
+
+  h2 {
+    strong {
+      color: var(--orange-600);
+    }
+
+    color: var(--gray-950);
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 0.75rem;
+
+      li:first-child {
+        color: var(--orange-700);
+      }
+    }
+  }
+
+  .container-buttons {
+    display: flex;
+    gap: 0.75rem;
+
+    button {
+      &:first-child {
+        all: unset;
+        color: var(--gray-950);
+        border: 0;
+        border-radius: 6px;
+        padding: 0.5rem;
+
+        cursor: pointer;
+        background-color: transparent;
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--orange-400);
+        }
+      }
+
+      &:nth-child(2) {
+        color: var(--gray-950);
+        background-color: var(--orange-600);
+        cursor: pointer;
+
+        border: 1px solid transparent;
+        border-radius: 6px;
+        padding: 0.5rem;
+
+        transition: 0.4s;
+
+        &:hover {
+          border-color: var(--orange-700);
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
