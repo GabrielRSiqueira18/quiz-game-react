@@ -1,11 +1,15 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useAppSelector } from "../store"
 import { useState } from "react"
+
+import styles from "./styles.module.css"
 
 export function QuizSingle() {
   const params = useParams()
 
   const { id } = params
+
+  const navigate = useNavigate()
 
   const [ step, setStep ] = useState(0)
   const [ countAnswersCorrects, setCountAnswersCorrects ] = useState(0)
@@ -23,7 +27,7 @@ export function QuizSingle() {
   }
 
   return (
-    <div>
+    <div className={styles['container-quiz-single']}>
       {question?.title}
       {question?.description}
       
@@ -47,7 +51,10 @@ export function QuizSingle() {
             })}
           </>
         ) : (
-          <div>{countAnswersCorrects}</div>
+          <div>
+            {countAnswersCorrects}
+            <button onClick={() => navigate('/')}>Voltar</button>
+          </div>
         )}
       </div>
     </div>

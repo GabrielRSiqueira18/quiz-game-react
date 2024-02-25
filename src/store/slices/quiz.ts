@@ -10,10 +10,25 @@ export const quizSlice = createSlice({
         description: 'Neste quiz você irá aprender melhor a usar contas básicas de matemática.',
         questionsGame: [
           {
+            name: 'Quanto é 4 + 4',
+            answers: ['2', '4', '8', '16'],
+            correctAnswer: '8',
+          },
+          {
+            name: 'Quanto é 150 + 140',
+            answers: ['230', '89', '290', '300'],
+            correctAnswer: '290',
+          },
+          {
+            name: 'Quanto é 0 + (- 30)',
+            answers: ['30', '-30', '0', '4'],
+            correctAnswer: '-30',
+          },
+          {
             name: 'Quanto é 1 + 1',
             answers: ['1', '2', '3', '4'],
-            correctAnswer: '1',
-          }
+            correctAnswer: '2',
+          },
         ]
       },
       {
@@ -24,8 +39,23 @@ export const quizSlice = createSlice({
           {
             name: 'Quanto é 4 / 4',
             answers: ['1', '2', '4', '8'],
-            correctAnswer: '8',
-          }
+            correctAnswer: '1',
+          },
+          {
+            name: 'Quanto é 8 / 2',
+            answers: ['1', '2', '4', '8'],
+            correctAnswer: '4',
+          },
+          {
+            name: 'Quanto é 10 / 0',
+            answers: ['0', '2', '4', '8'],
+            correctAnswer: '0',
+          },
+          {
+            name: 'Quanto é 4 / 1',
+            answers: ['1', '2', '4', '8'],
+            correctAnswer: '4',
+          },
         ]
       },
       {
@@ -46,7 +76,7 @@ export const quizSlice = createSlice({
           {
             name: 'Quanto é 1 * 1',
             answers: ['1', '2', '3', '4'],
-            correctAnswer: '16',
+            correctAnswer: '1',
           },
           {
             name: 'Quanto é 3 * 3',
