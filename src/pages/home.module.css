@@ -8,6 +8,8 @@
 .quiz-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
