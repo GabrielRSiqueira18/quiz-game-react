@@ -48,8 +48,8 @@ export const quizSlice = createSlice({
           },
           {
             name: 'Quanto é 10 / 0',
-            answers: ['0', '2', '4', '8'],
-            correctAnswer: '0',
+            answers: ['0', '2', '4', 'undefined'],
+            correctAnswer: 'undefined',
           },
           {
             name: 'Quanto é 4 / 1',
