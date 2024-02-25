@@ -1,7 +1,7 @@
 .container-quiz-box {
   border: 1px solid var(--orange-500);
   border-radius: 6px;
-  width: 400px;
+  width: 30%;
   padding: 0.5rem;
   text-align: center;
   display: flex;

@@ -4,3 +4,10 @@
   margin: 0 auto;
   padding: 1rem;
 }
+
+.quiz-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
