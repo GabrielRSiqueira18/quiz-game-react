@@ -28,35 +28,47 @@ export function QuizSingle() {
 
   return (
     <div className={styles['container-quiz-single']}>
-      {question?.title}
-      {question?.description}
-      
-      <div>
-        {step < 4 ? (
-          <>
-            <h2>{question?.questionsGame[step].name}</h2>
-            {question?.questionsGame[step].answers.map((answer) => {
-              return (
-                <section
-                  key={answer}
-                >
-                  {answer}
-                  <button
-                    onClick={() => handleChoiceCorrectAnswer(answer, question?.questionsGame[step].correctAnswer)}
-                  >
-                    Escolher
-                  </button>
-                </section>
-              )
-            })}
-          </>
-        ) : (
-          <div>
-            {countAnswersCorrects}
-            <button onClick={() => navigate('/')}>Voltar</button>
-          </div>
-        )}
-      </div>
+     <div className={styles['quiz-single']}>
+      <header>
+          <h2>{question?.title}</h2>
+          <span>
+            {question?.description}
+          </span>
+        </header>
+        
+        <div className={styles['form-question']}>
+          {step < 4 ? (
+            <>
+              <h2>
+                <span>Pergunta {step + 1}</span>
+                <span>{question?.questionsGame[step].name}</span>
+              </h2>
+              <div className={styles['cotainer-question-game-choice']}>
+                {question?.questionsGame[step].answers.map((answer) => {
+                  return (
+                    <section
+                      className={styles['question-game-choice']}
+                      key={answer}
+                    >
+                      <span className={styles['span-answer']}>{answer}</span>
+                      <button
+                        onClick={() => handleChoiceCorrectAnswer(answer, question?.questionsGame[step].correctAnswer)}
+                      >
+                        Escolher
+                      </button>
+                    </section>
+                  )
+                })}
+              </div>
+            </>
+          ) : (
+            <div className={styles['final-step']}>
+              <h2>Você acertou {countAnswersCorrects} perguntas de 4</h2>
+              <button onClick={() => navigate('/')}>Voltar</button>
+            </div>
+          )}
+        </div>
+     </div>
     </div>
   )
 }

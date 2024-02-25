@@ -1,7 +1,119 @@
 .container-quiz-single {
+  width: 100%;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   position: relative;
-  top: 50vh;
-  left: 40%;
+  bottom: 4rem;
+
+  .quiz-single {
+    padding: 1rem;
+    border: 1px solid var(--orange-600);
+    border-radius: 6px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  .form-question {
+    h2 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      span:nth-child(1) {
+        color: var(--orange-600);
+      }
+
+      span:nth-child(2) {
+        text-decoration: underline;
+        text-decoration-color: var(--orange-700);
+        
+      }
+    }
+  }
+
+  .cotainer-question-game-choice {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    text-align: center;
+
+    margin-top: 1rem;
+
+    .question-game-choice {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .span-answer {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--gray-800);
+        border-top: 1px solid var(--gray-950);
+        border-left: 1px solid var(--gray-950);
+        border-right: 1px solid var(--gray-950);
+        border-radius: 6px 6px 6px 6px;
+        padding: 0.5rem;
+      }
+
+      button {
+        all: unset;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--orange-700);
+        padding: 0.25rem;
+        cursor: pointer;
+        color: var(--orange-200);
+        transition: 0.4s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+    }
+  }
+}
+
+.final-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  
+  button {
+    all: unset;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--orange-700);
+    padding: 0.25rem;
+    cursor: pointer;
+    color: var(--orange-200);
+    transition: 0.4s;
+    text-align: center;
+    font-size: 1.25rem;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
 }
